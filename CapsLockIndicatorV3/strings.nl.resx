@@ -194,7 +194,7 @@
     <comment>The caption for the "Text colour deactivated" button.</comment>
   </data>
   <data name="generalIconBalloonText" xml:space="preserve">
-    <value>YActiveer de CapsLock indicator opnieuw door dubbel te klikken op het pictogram.</value>
+    <value>Activeer de CapsLock indicator opnieuw door dubbel te klikken op het pictogram.</value>
     <comment>The text that is shown in the icon balloon tip when CLI is being hidden.</comment>
   </data>
   <data name="hideOnStartup" xml:space="preserve">
@@ -266,7 +266,7 @@
     <comment>The title for the "Show notification when..." group box</comment>
   </data>
   <data name="startOnLogon" xml:space="preserve">
-    <value>Automatisch starten bij inloggen</value>
+    <value>Automatisch starten</value>
     <comment>The label for the check box that enables or disabled the auto start.</comment>
   </data>
   <data name="updateAvailable" xml:space="preserve">
