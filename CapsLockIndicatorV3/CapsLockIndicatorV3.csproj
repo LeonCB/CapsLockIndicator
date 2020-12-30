@@ -134,12 +134,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateDialog.Designer.cs">
-      <DependentUpon>UpdateDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="VersionCheck.cs" />
     <Compile Include="ViewOnlyRichTextBox.cs">
       <SubType>Component</SubType>
@@ -177,20 +171,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="strings.de.resx" />
-    <EmbeddedResource Include="strings.es.resx" />
-    <EmbeddedResource Include="strings.fr.resx" />
-    <EmbeddedResource Include="strings.it.resx" />
     <EmbeddedResource Include="strings.nl.resx" />
-    <EmbeddedResource Include="strings.pt-PT.resx" />
     <EmbeddedResource Include="strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="strings.ru.resx" />
-    <EmbeddedResource Include="strings.zh-CN.resx" />
-    <EmbeddedResource Include="UpdateDialog.resx">
-      <DependentUpon>UpdateDialog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

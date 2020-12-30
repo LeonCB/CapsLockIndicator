@@ -1,0 +1,16 @@
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\bin\Release\CapsLockIndicatorV3.exe.config
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\bin\Release\CapsLockIndicatorV3.exe
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\bin\Release\nl\CapsLockIndicatorV3.resources.dll
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.DownloadDialog.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.HelpWindow.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.IndicatorOverlay.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.IndSettingsWindow.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.MainForm.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.NumberInputDialog.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.resources.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.strings.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.strings.nl.resources
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.csproj.GenerateResource.cache
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.csproj.CoreCompileInputs.cache
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\nl\CapsLockIndicatorV3.resources.dll
+C:\Users\leonb\Documents\GitHub\CapsLockIndicator\CapsLockIndicatorV3\obj\Release\CapsLockIndicatorV3.exe

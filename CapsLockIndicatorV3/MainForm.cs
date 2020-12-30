@@ -114,8 +114,6 @@ namespace CapsLockIndicatorV3
                 hideWindowTimer.Start();
             }
 
-            checkForUpdatedCheckBox.Checked = Properties.Settings.Default.checkForUpdates;
-
             AddCultures();
 
             ApplyLocales();
@@ -195,7 +193,6 @@ namespace CapsLockIndicatorV3
             hideWindow.Text = strings.hideWindow;
             exitApplication.Text = strings.exitApplication;
             indSettings.Text = strings.notificationSettings;
-            checkForUpdatesButton.Text = strings.checkForUpdates;
             startonlogonCheckBox.Text = strings.startOnLogon;
             generalIcon.BalloonTipText = strings.generalIconBalloonText;
             showToolStripMenuItem.Text = strings.contextMenuShow;
@@ -290,78 +287,6 @@ namespace CapsLockIndicatorV3
             Properties.Settings.Default.Save();
         }
 
-        void handleVersion(string xmlData)
-        {
-            try
-            {
-                Assembly assembly = Assembly.GetExecutingAssembly();
-                FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-                string currentVersion = fvi.FileVersion;
-
-                XDocument doc = XDocument.Parse(xmlData);
-
-                IEnumerable<XElement> parent = doc.Descendants("cli");
-
-                string latestVersion = parent.Descendants()
-                                             .Where(x => (string)x.Attribute("name") == "version_number")
-                                             .FirstOrDefault()
-                                             .Value;
-
-                string release_date = parent.Descendants()
-                                            .Where(x => (string)x.Attribute("name") == "release_date")
-                                            .FirstOrDefault()
-                                            .Value;
-
-                string release_url = parent.Descendants()
-                                           .Where(x => (string)x.Attribute("name") == "release_url")
-                                           .FirstOrDefault()
-                                           .Value;
-
-                string download_url = parent.Descendants()
-                                            .Where(x => (string)x.Attribute("name") == "download_url")
-                                            .FirstOrDefault()
-                                            .Value;
-
-                string changelog = parent.Descendants()
-                                         .Where(x => (string)x.Attribute("name") == "changelog")
-                                         .FirstOrDefault()
-                                         .Value;
-
-                Version cVersion = new Version(currentVersion);
-                Version lVersion = new Version(latestVersion);
-
-                if (lVersion > cVersion)
-                {
-                    UpdateDialog ud = new UpdateDialog();
-                    ud.changelogRtf.Rtf = changelog;
-                    ud.infoLabel.Text = string.Format(strings.updateInfoFormat, latestVersion, release_date);
-                    DialogResult res = ud.ShowDialog();
-
-                    if (res == DialogResult.OK)
-                    {
-                        DownloadDialog dd = new DownloadDialog();
-                        dd.DownloadURL = download_url;
-                        dd.ShowDialog();
-                    }
-                    else if (res == DialogResult.Ignore) // Download manually
-                    {
-                        Process.Start(release_url + "&ov=" + currentVersion);
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-            }
-
-            checkForUpdatesButton.Text = strings.checkForUpdates;
-            checkForUpdatesButton.Enabled = true;
-        }
-
-        void doVersionCheck()
-        {
-            VersionCheck.IsLatestVersion(handleVersion);
-        }
 
         void MainFormLoad(object sender, EventArgs e)
         {
@@ -370,9 +295,6 @@ namespace CapsLockIndicatorV3
             string version = fvi.FileVersion;
             string copyright = fvi.LegalCopyright;
             aboutText.Text = String.Format(resources.GetString("aboutTextFormat"), version, copyright);
-
-            if (Properties.Settings.Default.checkForUpdates)
-                doVersionCheck();
         }
 
         void ExitApplicationClick(object sender, EventArgs e)
@@ -446,13 +368,6 @@ namespace CapsLockIndicatorV3
             indSettingsWindow.ShowDialog();
         }
 
-        private void checkForUpdatesButton_Click(object sender, EventArgs e)
-        {
-            checkForUpdatesButton.Enabled = false;
-            checkForUpdatesButton.Text = strings.checkingForUpdates;
-            doVersionCheck();
-        }
-
         private void startonlogonCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             RegistryKey rk = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true);
@@ -510,12 +425,6 @@ namespace CapsLockIndicatorV3
             Process.Start("https://cli.jonaskohl.de/");
         }
 
-        private void checkForUpdatedCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.checkForUpdates = checkForUpdatedCheckBox.Checked;
-            Properties.Settings.Default.Save();
-        }
-
         private void localeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             DropDownLocale locale = (DropDownLocale)localeComboBox.SelectedItem;
@@ -524,11 +433,6 @@ namespace CapsLockIndicatorV3
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.DefaultThreadCurrentCulture;
                 previousLocaleIndex = localeComboBox.SelectedIndex;
-            }
-            else if (locale.localeString == "--get-more")
-            {
-                localeComboBox.SelectedIndex = previousLocaleIndex;
-                Process.Start("https://cli.jonaskohl.de/!/translations#download-translations");
             }
             else
             {

@@ -85,12 +85,10 @@ namespace CapsLockIndicatorV3
             this.exitApplication = new System.Windows.Forms.Button();
             this.generalIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.indSettings = new System.Windows.Forms.Button();
-            this.checkForUpdatesButton = new System.Windows.Forms.Button();
             this.startonlogonCheckBox = new System.Windows.Forms.CheckBox();
             this.hideOnStartupCheckBox = new System.Windows.Forms.CheckBox();
             this.hideWindowTimer = new System.Windows.Forms.Timer(this.components);
             this.mainToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.checkForUpdatedCheckBox = new System.Windows.Forms.CheckBox();
             this.localeComboBox = new CapsLockIndicatorV3.LnComboBox();
             this.generalIconContextMenuStrip.SuspendLayout();
             this.iconsGroup.SuspendLayout();
@@ -162,7 +160,7 @@ namespace CapsLockIndicatorV3
             this.iconsGroup.Controls.Add(this.enableNumIcon);
             this.iconsGroup.Location = new System.Drawing.Point(12, 12);
             this.iconsGroup.Name = "iconsGroup";
-            this.iconsGroup.Size = new System.Drawing.Size(180, 100);
+            this.iconsGroup.Size = new System.Drawing.Size(225, 100);
             this.iconsGroup.TabIndex = 0;
             this.iconsGroup.TabStop = false;
             this.iconsGroup.Text = "Show icons for...";
@@ -214,9 +212,9 @@ namespace CapsLockIndicatorV3
             this.indicatorGroup.Controls.Add(this.enableScrollInd);
             this.indicatorGroup.Controls.Add(this.enableCapsInd);
             this.indicatorGroup.Controls.Add(this.enableNumInd);
-            this.indicatorGroup.Location = new System.Drawing.Point(200, 12);
+            this.indicatorGroup.Location = new System.Drawing.Point(240, 12);
             this.indicatorGroup.Name = "indicatorGroup";
-            this.indicatorGroup.Size = new System.Drawing.Size(180, 100);
+            this.indicatorGroup.Size = new System.Drawing.Size(225, 100);
             this.indicatorGroup.TabIndex = 1;
             this.indicatorGroup.TabStop = false;
             this.indicatorGroup.Text = "Show notification when...";
@@ -267,7 +265,7 @@ namespace CapsLockIndicatorV3
             // 
             this.showNoIcons.AutoSize = true;
             this.showNoIcons.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.showNoIcons.Location = new System.Drawing.Point(206, 118);
+            this.showNoIcons.Location = new System.Drawing.Point(246, 118);
             this.showNoIcons.Name = "showNoIcons";
             this.showNoIcons.Size = new System.Drawing.Size(109, 20);
             this.showNoIcons.TabIndex = 5;
@@ -279,7 +277,7 @@ namespace CapsLockIndicatorV3
             // 
             this.showNoNotification.AutoSize = true;
             this.showNoNotification.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.showNoNotification.Location = new System.Drawing.Point(206, 143);
+            this.showNoNotification.Location = new System.Drawing.Point(246, 143);
             this.showNoNotification.Name = "showNoNotification";
             this.showNoNotification.Size = new System.Drawing.Size(142, 20);
             this.showNoNotification.TabIndex = 6;
@@ -294,9 +292,9 @@ namespace CapsLockIndicatorV3
             this.aboutPanel.Controls.Add(this.aboutPanelTopBorder);
             this.aboutPanel.Controls.Add(this.aboutText);
             this.aboutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aboutPanel.Location = new System.Drawing.Point(0, 275);
+            this.aboutPanel.Location = new System.Drawing.Point(0, 242);
             this.aboutPanel.Name = "aboutPanel";
-            this.aboutPanel.Size = new System.Drawing.Size(390, 66);
+            this.aboutPanel.Size = new System.Drawing.Size(477, 66);
             this.aboutPanel.TabIndex = 4;
             // 
             // appNameLabel
@@ -330,7 +328,7 @@ namespace CapsLockIndicatorV3
             this.aboutPanelTopBorder.Dock = System.Windows.Forms.DockStyle.Top;
             this.aboutPanelTopBorder.Location = new System.Drawing.Point(0, 0);
             this.aboutPanelTopBorder.Name = "aboutPanelTopBorder";
-            this.aboutPanelTopBorder.Size = new System.Drawing.Size(390, 2);
+            this.aboutPanelTopBorder.Size = new System.Drawing.Size(477, 2);
             this.aboutPanelTopBorder.TabIndex = 3;
             this.aboutPanelTopBorder.TabStop = false;
             // 
@@ -349,7 +347,7 @@ namespace CapsLockIndicatorV3
             this.hideWindow.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.hideWindow.Location = new System.Drawing.Point(12, 200);
             this.hideWindow.Name = "hideWindow";
-            this.hideWindow.Size = new System.Drawing.Size(180, 29);
+            this.hideWindow.Size = new System.Drawing.Size(147, 29);
             this.hideWindow.TabIndex = 8;
             this.hideWindow.Text = "&Hide window";
             this.hideWindow.UseVisualStyleBackColor = true;
@@ -359,9 +357,9 @@ namespace CapsLockIndicatorV3
             // 
             this.exitApplication.AutoSize = true;
             this.exitApplication.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.exitApplication.Location = new System.Drawing.Point(198, 200);
+            this.exitApplication.Location = new System.Drawing.Point(165, 200);
             this.exitApplication.Name = "exitApplication";
-            this.exitApplication.Size = new System.Drawing.Size(182, 29);
+            this.exitApplication.Size = new System.Drawing.Size(147, 29);
             this.exitApplication.TabIndex = 10;
             this.exitApplication.Text = "&Exit application";
             this.exitApplication.UseVisualStyleBackColor = true;
@@ -381,25 +379,13 @@ namespace CapsLockIndicatorV3
             // 
             this.indSettings.AutoSize = true;
             this.indSettings.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.indSettings.Location = new System.Drawing.Point(12, 235);
+            this.indSettings.Location = new System.Drawing.Point(318, 200);
             this.indSettings.Name = "indSettings";
-            this.indSettings.Size = new System.Drawing.Size(180, 29);
+            this.indSettings.Size = new System.Drawing.Size(146, 29);
             this.indSettings.TabIndex = 9;
             this.indSettings.Text = "&Notification settings";
             this.indSettings.UseVisualStyleBackColor = true;
             this.indSettings.Click += new System.EventHandler(this.indSettings_Click);
-            // 
-            // checkForUpdatesButton
-            // 
-            this.checkForUpdatesButton.AutoSize = true;
-            this.checkForUpdatesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkForUpdatesButton.Location = new System.Drawing.Point(198, 235);
-            this.checkForUpdatesButton.Name = "checkForUpdatesButton";
-            this.checkForUpdatesButton.Size = new System.Drawing.Size(182, 29);
-            this.checkForUpdatesButton.TabIndex = 11;
-            this.checkForUpdatesButton.Text = "Check for &updates";
-            this.checkForUpdatesButton.UseVisualStyleBackColor = true;
-            this.checkForUpdatesButton.Click += new System.EventHandler(this.checkForUpdatesButton_Click);
             // 
             // startonlogonCheckBox
             // 
@@ -429,18 +415,6 @@ namespace CapsLockIndicatorV3
             // 
             this.hideWindowTimer.Tick += new System.EventHandler(this.hideWindowTimer_Tick);
             // 
-            // checkForUpdatedCheckBox
-            // 
-            this.checkForUpdatedCheckBox.Checked = true;
-            this.checkForUpdatedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkForUpdatedCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkForUpdatedCheckBox.Location = new System.Drawing.Point(206, 243);
-            this.checkForUpdatedCheckBox.Name = "checkForUpdatedCheckBox";
-            this.checkForUpdatedCheckBox.Size = new System.Drawing.Size(15, 15);
-            this.checkForUpdatedCheckBox.TabIndex = 12;
-            this.checkForUpdatedCheckBox.UseVisualStyleBackColor = true;
-            this.checkForUpdatedCheckBox.CheckedChanged += new System.EventHandler(this.checkForUpdatedCheckBox_CheckedChanged);
-            // 
             // localeComboBox
             // 
             this.localeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -448,7 +422,7 @@ namespace CapsLockIndicatorV3
             this.localeComboBox.FormattingEnabled = true;
             this.localeComboBox.Location = new System.Drawing.Point(12, 170);
             this.localeComboBox.Name = "localeComboBox";
-            this.localeComboBox.Size = new System.Drawing.Size(368, 24);
+            this.localeComboBox.Size = new System.Drawing.Size(452, 24);
             this.localeComboBox.TabIndex = 7;
             this.localeComboBox.SelectedIndexChanged += new System.EventHandler(this.localeComboBox_SelectedIndexChanged);
             this.localeComboBox.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.localeComboBox_Format);
@@ -458,12 +432,10 @@ namespace CapsLockIndicatorV3
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(390, 341);
+            this.ClientSize = new System.Drawing.Size(477, 308);
             this.Controls.Add(this.localeComboBox);
-            this.Controls.Add(this.checkForUpdatedCheckBox);
             this.Controls.Add(this.hideOnStartupCheckBox);
             this.Controls.Add(this.startonlogonCheckBox);
-            this.Controls.Add(this.checkForUpdatesButton);
             this.Controls.Add(this.indSettings);
             this.Controls.Add(this.exitApplication);
             this.Controls.Add(this.hideWindow);
@@ -497,7 +469,6 @@ namespace CapsLockIndicatorV3
 		}
 
         private System.Windows.Forms.Button indSettings;
-        private System.Windows.Forms.Button checkForUpdatesButton;
         private System.Windows.Forms.CheckBox startonlogonCheckBox;
         private System.Windows.Forms.CheckBox hideOnStartupCheckBox;
         private System.Windows.Forms.Timer hideWindowTimer;
@@ -508,7 +479,6 @@ namespace CapsLockIndicatorV3
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private LnkLabel appNameLabel;
         private System.Windows.Forms.ToolTip mainToolTip;
-        private System.Windows.Forms.CheckBox checkForUpdatedCheckBox;
         private CapsLockIndicatorV3.LnComboBox localeComboBox;
     }
 }
